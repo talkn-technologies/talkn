@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // ECMAScript 2020をターゲットにします
+    "module": "commonjs", // Node.jsスタイルのモジュールを使用します
+    "lib": ["es2020", "dom"], // ECMAScript 2020のライブラリを含めます
+    "outDir": "./dist", // コンパイルされたファイルを dist ディレクトリに出力します
+    "baseUrl": ".", // モジュール解決のためのベースディレクトリ
+    "strict": true, // 厳格な型チェックを有効にします
+    "resolveJsonModule": true,
+    "esModuleInterop": true, // ESモジュールとの相互運用性を有効にします
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字を一貫させることを強制します
+    "types": ["node", "webpack-env"],
+    "noImplicitAny": true,
+    "jsx": "react",
+    "paths": {
+      "@common/*": ["common/src/*"],
+      "@api-client/*": ["./src/*"]
+    }
+  },
+  // コンパイル対象
+  "include": [
+    "src/**/*.ts", // src ディレクトリ内のすべての TypeScript ファイル
+    "common/src/**/*.ts" // talkn-common ディレクトリ内の TypeScript ファイル
+  ],
+  "exclude": [
+    "node_modules", // node_modules ディレクトリを除外します
+    "dist" // dist ディレクトリを除外します
+  ]
+}

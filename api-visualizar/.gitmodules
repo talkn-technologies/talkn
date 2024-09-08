@@ -1,0 +1,3 @@
+[submodule "api-client"]
+	path = api-client
+	url = https://github.com/mirazle/talkn-api-client.git

@@ -1,0 +1,10 @@
+{
+  "restartable": "rs",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "watch": ["./src/*", "../talkn-common/src/*"],
+  "ext": "ts",
+  "ignore": ["tests/**/*.js"],
+  "exec": "ts-node -r tsconfig-paths/register ./src/run.ts"
+}
